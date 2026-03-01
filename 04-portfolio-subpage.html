@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Nexus Industrial: Circular Manufacturing — Verdant Path</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {primary: "#a8e689", "background-light": "#f7f8f6", "background-dark": "#172012", sage: "#8da382", "neutral-zen": "#fcfdfc", "soft-sage": "#eef7e9"}, fontFamily: {display: ["Newsreader", "serif"]}, borderRadius: {DEFAULT: "0.5rem", lg: "1rem", xl: "1.5rem", full: "9999px"}}}};</script>
+<style>
+  body { font-family: 'Newsreader', serif; }
+  .prose-vp p { margin-bottom: 1.5rem; line-height: 1.85; color: rgba(51,65,85,0.85); font-weight: 300; font-size: 1.1rem; }
+</style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-100 antialiased overflow-x-hidden">
+
+<!-- Navigation -->
+<nav class="fixed top-0 w-full z-50 px-8 py-6 flex justify-between items-center bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md">
+  <a href="01-home.html" class="flex items-center gap-2">
+    <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
+      <span class="material-icons-outlined text-white">eco</span>
+    </div>
+    <span class="text-xl font-semibold tracking-tight">Verdant Path</span>
+  </a>
+  <div class="hidden md:flex gap-12 text-sm uppercase tracking-widest font-medium text-slate-500 dark:text-slate-400">
+    <a class="hover:text-primary transition-colors" href="02-about.html">Approach</a>
+    <a class="hover:text-primary transition-colors" href="03-services.html">Expertise</a>
+    <a class="hover:text-primary transition-colors" href="05-contact.html">Insights</a>
+    <a class="hover:text-primary transition-colors" href="05-contact.html">Contact</a>
+  </div>
+  <div class="flex items-center gap-3">
+    <button id="dark-toggle" onclick="toggleDark()" class="w-9 h-9 flex items-center justify-center rounded-full border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all" aria-label="Toggle dark mode">
+      <span class="material-icons-outlined text-slate-500 dark:text-slate-400 text-xl">light_mode</span>
+    </button>
+    <button class="hidden md:block px-6 py-2 border border-slate-200 dark:border-slate-800 rounded-full text-sm font-medium hover:bg-slate-50 dark:hover:bg-slate-800 transition-all">
+      Client Login
+    </button>
+    <button id="mobile-menu-btn" onclick="toggleMobileMenu()" class="md:hidden w-9 h-9 flex items-center justify-center rounded-full border border-slate-200 dark:border-slate-700" aria-label="Open menu">
+      <span class="material-icons-outlined text-slate-600 dark:text-slate-300">menu</span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div id="mobile-menu" class="hidden fixed inset-0 z-40 bg-background-light dark:bg-background-dark flex flex-col items-center justify-center gap-8 text-center">
+  <button onclick="toggleMobileMenu()" class="absolute top-6 right-8 w-9 h-9 flex items-center justify-center" aria-label="Close menu">
+    <span class="material-icons-outlined text-slate-500 dark:text-slate-400 text-2xl">close</span>
+  </button>
+  <a class="text-2xl font-display font-light hover:text-primary transition-colors" href="02-about.html">Approach</a>
+  <a class="text-2xl font-display font-light hover:text-primary transition-colors" href="03-services.html">Expertise</a>
+  <a class="text-2xl font-display font-light hover:text-primary transition-colors" href="05-contact.html">Insights</a>
+  <a class="text-2xl font-display font-light hover:text-primary transition-colors" href="05-contact.html">Contact</a>
+</div>
+
+<!-- Hero Image -->
+<header class="pt-24">
+  <div class="relative w-full h-[75vh] overflow-hidden">
+    <img
+      src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkGyfIQnnu9h0zM8HXmOpXUu89ntu3mPX4yOMRZguxlIXYqeuRw82OboyN-Ih0GST-udxeE0QRz6ra3p2xvztuj-fyW6wIYFKwELYpj5OYkap2M9FkPrcJFzqa8rbTK7fdYxej-jTnU0DKQK80dZfCaUFyB6O_b4juQkDVqF5mR7fJf9epBA_P0MCB6cpNCwpCWBHl1ge7GPYvpHjujsm8zcDuWNQUDzRIoSJy_9OUGZVyyXwHw8BF9Ukrp8NYNrCUK4ciiTS9Ntw"
+      alt="Sustainable factory"
+      class="w-full h-full object-cover"
+    />
+    <div class="absolute inset-0 bg-gradient-to-t from-background-dark/70 via-background-dark/20 to-transparent"></div>
+    <div class="absolute inset-0 flex items-end pb-20">
+      <div class="max-w-7xl mx-auto px-8 w-full">
+        <!-- Breadcrumb -->
+        <nav class="mb-6 flex items-center gap-2 text-white/60 text-xs uppercase tracking-widest">
+          <a class="hover:text-white transition-colors" href="04-portfolio.html">Portfolio</a>
+          <span class="material-icons-outlined text-xs">chevron_right</span>
+          <span class="text-white/90">Circular Economy</span>
+        </nav>
+        <h1 class="font-display text-5xl md:text-7xl text-white max-w-4xl leading-[1.1]">
+          Nexus Industrial:<br/>
+          <span class="italic font-light">Pioneering Circular Manufacturing</span>
+        </h1>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="max-w-7xl mx-auto px-8 py-24">
+
+  <!-- Challenge + Impact grid -->
+  <section class="grid grid-cols-1 lg:grid-cols-12 gap-16 mb-24 pb-24 border-b border-slate-200 dark:border-slate-800">
+    <div class="lg:col-span-7">
+      <div class="flex items-center gap-3 text-primary font-medium mb-6">
+        <span class="h-[1px] w-12 bg-primary"></span>
+        <span class="uppercase tracking-[0.2em] text-xs">The Challenge</span>
+      </div>
+      <p class="font-display text-3xl md:text-4xl text-slate-900 dark:text-white leading-snug mb-8">
+        Modernizing a 40-year-old heavy manufacturing facility to meet zero-waste benchmarks without compromising operational throughput or profitability.
+      </p>
+      <p class="text-lg text-slate-500 dark:text-slate-400 leading-relaxed font-light">
+        Nexus Industrial faced mounting regulatory pressure and rising resource costs. The mandate was clear: transform the linear "take-make-waste" model into a self-sustaining circular loop while proving the financial viability of ESG integration at scale.
+      </p>
+    </div>
+
+    <!-- Impact Summary -->
+    <div class="lg:col-span-4 lg:col-start-9">
+      <div class="bg-soft-sage dark:bg-primary/10 p-10 rounded-xl border border-primary/20">
+        <div class="flex items-center gap-3 text-slate-500 mb-8">
+          <span class="h-[1px] w-8 bg-sage"></span>
+          <h2 class="uppercase tracking-widest text-xs font-semibold">Impact Summary</h2>
+        </div>
+        <div class="space-y-8">
+          <div>
+            <span class="block text-4xl font-display font-bold text-slate-900 dark:text-white">40%</span>
+            <span class="text-xs uppercase tracking-widest text-slate-500">Carbon Reduction</span>
+          </div>
+          <div class="h-[1px] bg-primary/20"></div>
+          <div>
+            <span class="block text-4xl font-display font-bold text-slate-900 dark:text-white">92%</span>
+            <span class="text-xs uppercase tracking-widest text-slate-500">Water Recirculation</span>
+          </div>
+          <div class="h-[1px] bg-primary/20"></div>
+          <div>
+            <span class="block text-4xl font-display font-bold text-slate-900 dark:text-white">€2.4M</span>
+            <span class="text-xs uppercase tracking-widest text-slate-500">Annual Energy Savings</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Article Body -->
+  <div class="max-w-3xl mx-auto">
+    <article class="prose-vp">
+      <h3 class="font-display text-3xl text-slate-900 dark:text-white mb-6 not-italic">Strategic Infrastructure Overhaul</h3>
+      <p>
+        The transition began with a comprehensive audit of the facility's thermodynamics and material flow. By identifying critical heat-loss points and redundant water cycles, we designed a closed-loop system that treats manufacturing not as a terminal process, but as a biological organism.
+      </p>
+
+      <figure class="my-16 -mx-4 md:-mx-20">
+        <div class="rounded-xl overflow-hidden aspect-video">
+          <img
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5bO3SpBTdBprfwEpmOS3pUgwIjxGw1MTGW4DI_lS41dPsJ8M_GN3VaJdmx1fScm-AdMNH19sPvq6gHYjEevyNClRkSIgsACnA6zTImtD4pWmugojDSdJflYN-8iMh72ZSWj6071CLYcAtIg8-mVelRJZux4L7PfLO0Pm3K9Q1RTI6sxKOAJf0yYiS-qT-zVxZSRTAv80tapmJDCzHWAwSaWM1B8CH3_MVMJIpb1C9FrL0HJP7_xSIvIGJ0Q216SJGHp6P56GPehI"
+            alt="Facility interior"
+            class="w-full h-full object-cover"
+          />
+        </div>
+        <figcaption class="mt-4 text-center text-xs uppercase tracking-widest text-slate-400 font-medium">
+          Fig 1.0 — Real-time monitoring of regenerated energy output across the northern wing.
+        </figcaption>
+      </figure>
+
+      <p>
+        Central to this transformation was the implementation of AI-driven energy optimization. The system predicts demand spikes and adjusts localized power consumption in milliseconds, ensuring that renewable energy sources—primarily onsite solar and thermal recovery—are utilized at peak efficiency.
+      </p>
+
+      <!-- Blockquote -->
+      <blockquote class="my-16 pl-10 border-l-4 border-primary">
+        <p class="font-display text-2xl italic text-slate-700 dark:text-slate-300 leading-relaxed mb-4">
+          "This wasn't just about compliance; it was about resilience. Verdant Path helped us see that sustainability is the most potent risk-mitigation tool we have in a volatile market."
+        </p>
+        <cite class="not-italic font-medium text-xs uppercase tracking-[0.2em] text-slate-400">— Marcus Thorne, CEO Nexus Industrial</cite>
+      </blockquote>
+
+      <h3 class="font-display text-3xl text-slate-900 dark:text-white mb-6 not-italic">Community and Ecosystem Integration</h3>
+      <p>
+        The project extended beyond the factory walls. We worked with local municipalities to create a "symbiosis network" where excess heat from the manufacturing process now provides carbon-neutral heating for 400 nearby residential units.
+      </p>
+
+      <!-- Video placeholder -->
+      <div class="my-16 bg-slate-900 aspect-video rounded-xl flex items-center justify-center relative group cursor-pointer overflow-hidden">
+        <img
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuDozM5Uaae8noZZosMxE8HsRSp8qTkJoMA1s1H7xQmE7CcNO7rPqMdxBE9iKC6l6PaF-gxphPMj9hULsrBuu-OqRPE6sXXNcZMuGHDgwJYIV2A0-ZRqouAuwfq1wQ5CdMn_6Au4ORkaX_Cre8pQEqpZP4nyV33D9Qp9ct4F1bUohTsmo7ECCzQODKUpSmm46Y88HZfkKN47N2XSwHfBp0HJ8llEOnnMdHZ7vqWzGQCqUijPcBJgAYxqdvqUVEArNbriDZKrEnKUQaU"
+          alt="Video thumbnail"
+          class="absolute inset-0 w-full h-full object-cover opacity-40 grayscale group-hover:scale-105 transition-transform duration-700"
+        />
+        <div class="z-10 w-20 h-20 rounded-full bg-primary flex items-center justify-center shadow-2xl shadow-primary/30 group-hover:scale-110 transition-transform">
+          <span class="material-icons-outlined text-white text-4xl ml-1">play_arrow</span>
+        </div>
+        <div class="absolute bottom-6 left-6 z-10">
+          <span class="text-white/70 text-xs uppercase tracking-widest font-medium">Watch Case Film: The Nexus Transformation</span>
+        </div>
+      </div>
+
+      <p>
+        Final results after the 24-month implementation period exceeded all initial ESG targets. Nexus Industrial is now recognized as a global leader in circular manufacturing, proving that heavy industry can indeed be a catalyst for ecological restoration.
+      </p>
+    </article>
+
+    <!-- Download CTA -->
+    <div class="mt-24 p-12 bg-background-dark text-white rounded-xl flex flex-col md:flex-row items-center justify-between gap-8">
+      <div class="text-center md:text-left">
+        <h4 class="font-display text-2xl italic mb-2">Technical Analysis</h4>
+        <p class="text-white/50 font-light text-sm">Detailed 48-page report on methodology, data verification, and financial modeling.</p>
+      </div>
+      <a href="#" class="inline-flex items-center gap-2 px-8 py-4 bg-primary text-slate-800 font-medium rounded-full hover:scale-105 transition-transform">
+        <span class="material-icons-outlined text-sm">download</span>
+        Download Report
+      </a>
+    </div>
+  </div>
+</main>
+
+<!-- Related Impact -->
+<section class="bg-soft-sage dark:bg-primary/5 py-32 mt-12">
+  <div class="max-w-7xl mx-auto px-8">
+    <div class="flex justify-between items-end mb-16">
+      <h2 class="font-display text-4xl italic text-slate-900 dark:text-white">Related Impact</h2>
+      <a class="text-xs font-medium uppercase tracking-widest border-b border-slate-300 dark:border-slate-600 pb-1 hover:border-primary hover:text-primary transition-colors" href="#">View All Projects</a>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+      <a class="group" href="#">
+        <div class="aspect-[16/10] overflow-hidden rounded-xl mb-6">
+          <img
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDozM5Uaae8noZZosMxE8HsRSp8qTkJoMA1s1H7xQmE7CcNO7rPqMdxBE9iKC6l6PaF-gxphPMj9hULsrBuu-OqRPE6sXXNcZMuGHDgwJYIV2A0-ZRqouAuwfq1wQ5CdMn_6Au4ORkaX_Cre8pQEqpZP4nyV33D9Qp9ct4F1bUohTsmo7ECCzQODKUpSmm46Y88HZfkKN47N2XSwHfBp0HJ8llEOnnMdHZ7vqWzGQCqUijPcBJgAYxqdvqUVEArNbriDZKrEnKUQaU"
+            alt="Related Project"
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+          />
+        </div>
+        <div class="flex items-center gap-3 text-primary mb-2">
+          <span class="h-[1px] w-8 bg-primary"></span>
+          <span class="text-xs uppercase tracking-widest font-semibold">Case Study 02</span>
+        </div>
+        <h3 class="font-display text-2xl text-slate-900 dark:text-white group-hover:text-primary transition-colors">The Canopy Initiative: Global Reforestation</h3>
+      </a>
+      <a class="group" href="#">
+        <div class="aspect-[16/10] overflow-hidden rounded-xl mb-6">
+          <img
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5bO3SpBTdBprfwEpmOS3pUgwIjxGw1MTGW4DI_lS41dPsJ8M_GN3VaJdmx1fScm-AdMNH19sPvq6gHYjEevyNClRkSIgsACnA6zTImtD4pWmugojDSdJflYN-8iMh72ZSWj6071CLYcAtIg8-mVelRJZux4L7PfLO0Pm3K9Q1RTI6sxKOAJf0yYiS-qT-zVxZSRTAv80tapmJDCzHWAwSaWM1B8CH3_MVMJIpb1C9FrL0HJP7_xSIvIGJ0Q216SJGHp6P56GPehI"
+            alt="Related Project"
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+          />
+        </div>
+        <div class="flex items-center gap-3 text-primary mb-2">
+          <span class="h-[1px] w-8 bg-primary"></span>
+          <span class="text-xs uppercase tracking-widest font-semibold">Case Study 03</span>
+        </div>
+        <h3 class="font-display text-2xl text-slate-900 dark:text-white group-hover:text-primary transition-colors">Aether Corp: Systemic ESG Governance</h3>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="py-12 border-t border-slate-200 dark:border-slate-800">
+  <div class="max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+    <p class="text-slate-400 font-display italic text-lg">"Sustainability is not a goal, it is a way of being."</p>
+    <div class="flex gap-6">
+      <a class="text-slate-400 hover:text-primary transition-colors" href="#"><span class="material-icons-outlined">language</span></a>
+      <a class="text-slate-400 hover:text-primary transition-colors" href="#"><span class="material-icons-outlined">share</span></a>
+      <a class="text-slate-400 hover:text-primary transition-colors" href="#"><span class="material-icons-outlined">alternate_email</span></a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function toggleDark() {
+    const html = document.documentElement;
+    const isDark = html.classList.toggle('dark');
+    html.classList.toggle('light', !isDark);
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    const icon = document.querySelector('#dark-toggle .material-icons-outlined');
+    if (icon) icon.textContent = isDark ? 'dark_mode' : 'light_mode';
+  }
+  function toggleMobileMenu() {
+    document.getElementById('mobile-menu').classList.toggle('hidden');
+  }
+  (function() {
+    const saved = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    document.documentElement.classList.remove('light', 'dark');
+    document.documentElement.classList.add(saved);
+    if (saved === 'dark') {
+      const icon = document.querySelector('#dark-toggle .material-icons-outlined');
+      if (icon) icon.textContent = 'dark_mode';
+    }
+  })();
+</script>
+</body>
+</html>

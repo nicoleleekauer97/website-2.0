@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Expertise & Services — Verdant Path</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {primary: "#a8e689", "background-light": "#f7f8f6", "background-dark": "#172012", sage: "#8da382", "neutral-zen": "#fcfdfc", "soft-sage": "#eef7e9"}, fontFamily: {display: ["Newsreader", "serif"]}, borderRadius: {DEFAULT: "0.5rem", lg: "1rem", xl: "1.5rem", full: "9999px"}}}};</script>
+<style>
+  body { font-family: 'Newsreader', serif; }
+</style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-100 antialiased overflow-x-hidden">
+
+<!-- Navigation -->
+<nav class="fixed top-0 w-full z-50 px-8 py-6 flex justify-between items-center bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md">
+  <a href="01-home.html" class="flex items-center gap-2">
+    <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
+      <span class="material-icons-outlined text-white">eco</span>
+    </div>
+    <span class="text-xl font-semibold tracking-tight">Verdant Path</span>
+  </a>
+  <div class="hidden md:flex gap-12 text-sm uppercase tracking-widest font-medium text-slate-500 dark:text-slate-400">
+    <a class="hover:text-primary transition-colors" href="02-about.html">About</a>
+    <a class="text-primary border-b border-primary/40 pb-1" href="03-services.html">Services</a>
+    <a class="hover:text-primary transition-colors" href="04-portfolio.html">Portfolio</a>
+    <a class="hover:text-primary transition-colors" href="05-contact.html#blog">Blog</a>
+    <a class="hover:text-primary transition-colors" href="05-contact.html">Contact</a>
+  </div>
+  <div class="flex items-center gap-3">
+    <button id="dark-toggle" onclick="toggleDark()" class="w-9 h-9 flex items-center justify-center rounded-full border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all" aria-label="Toggle dark mode">
+      <span class="material-icons-outlined text-slate-500 dark:text-slate-400 text-xl">light_mode</span>
+    </button>
+    <button class="hidden md:block px-6 py-2 border border-slate-200 dark:border-slate-800 rounded-full text-sm font-medium hover:bg-slate-50 dark:hover:bg-slate-800 transition-all">
+      Client Login
+    </button>
+    <button id="mobile-menu-btn" onclick="toggleMobileMenu()" class="md:hidden w-9 h-9 flex items-center justify-center rounded-full border border-slate-200 dark:border-slate-700" aria-label="Open menu">
+      <span class="material-icons-outlined text-slate-600 dark:text-slate-300">menu</span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div id="mobile-menu" class="hidden fixed inset-0 z-40 bg-background-light dark:bg-background-dark flex flex-col items-center justify-center gap-8 text-center">
+  <button onclick="toggleMobileMenu()" class="absolute top-6 right-8 w-9 h-9 flex items-center justify-center" aria-label="Close menu">
+    <span class="material-icons-outlined text-slate-500 dark:text-slate-400 text-2xl">close</span>
+  </button>
+  <a class="text-2xl font-display font-light hover:text-primary transition-colors" href="02-about.html">About</a>
+  <a class="text-2xl font-display font-light hover:text-primary transition-colors" href="03-services.html">Services</a>
+  <a class="text-2xl font-display font-light hover:text-primary transition-colors" href="04-portfolio.html">Portfolio</a>
+  <a class="text-2xl font-display font-light hover:text-primary transition-colors" href="05-contact.html#blog">Blog</a>
+  <a class="text-2xl font-display font-light hover:text-primary transition-colors" href="05-contact.html">Contact</a>
+</div>
+
+<!-- Header -->
+<div class="pt-40 pb-16 px-8 text-center max-w-3xl mx-auto">
+  <div class="flex items-center justify-center gap-3 text-primary font-medium mb-6">
+    <span class="h-[1px] w-12 bg-primary"></span>
+    <span class="uppercase tracking-[0.2em] text-xs">Our Expertise</span>
+    <span class="h-[1px] w-12 bg-primary"></span>
+  </div>
+  <h1 class="text-5xl md:text-6xl font-display italic leading-[1.1] text-slate-900 dark:text-white mb-6">
+    Refined Services &amp; Offerings
+  </h1>
+  <p class="text-slate-600 dark:text-slate-400 text-lg leading-relaxed max-w-2xl mx-auto font-light">
+    Guiding your organization through the complexities of ESG and sustainability with a focused, calm, and strategic approach.
+  </p>
+</div>
+
+<!-- Services Grid -->
+<main class="max-w-7xl mx-auto px-8 pb-24">
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+    <!-- Card 1 -->
+    <div class="group bg-white/60 dark:bg-white/5 backdrop-blur-sm rounded-xl p-8 flex flex-col items-center text-center border border-slate-200/60 dark:border-slate-700/40 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/10 transition-all duration-500">
+      <div class="mb-8 w-16 h-16 rounded-full bg-soft-sage dark:bg-primary/10 flex items-center justify-center transition-transform duration-500 group-hover:scale-110">
+        <span class="material-icons-outlined text-3xl text-sage dark:text-primary">explore</span>
+      </div>
+      <h3 class="text-2xl font-display font-light text-slate-900 dark:text-white mb-4 leading-snug">ESG Strategy Development</h3>
+      <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed mb-10 flex-grow">
+        Tailored frameworks that align your core business values with global sustainability standards.
+      </p>
+      <a href="05-contact.html" class="w-full py-3 px-6 rounded-full border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 hover:bg-primary hover:text-white hover:border-primary transition-all duration-300 text-sm font-medium tracking-wide">
+        Inquire
+      </a>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="group bg-white/60 dark:bg-white/5 backdrop-blur-sm rounded-xl p-8 flex flex-col items-center text-center border border-slate-200/60 dark:border-slate-700/40 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/10 transition-all duration-500">
+      <div class="mb-8 w-16 h-16 rounded-full bg-soft-sage dark:bg-primary/10 flex items-center justify-center transition-transform duration-500 group-hover:scale-110">
+        <span class="material-icons-outlined text-3xl text-sage dark:text-primary">description</span>
+      </div>
+      <h3 class="text-2xl font-display font-light text-slate-900 dark:text-white mb-4 leading-snug">Sustainability Reporting</h3>
+      <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed mb-10 flex-grow">
+        Transparent, data-driven reporting to showcase your ESG progress to investors and stakeholders.
+      </p>
+      <a href="05-contact.html" class="w-full py-3 px-6 rounded-full border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 hover:bg-primary hover:text-white hover:border-primary transition-all duration-300 text-sm font-medium tracking-wide">
+        Inquire
+      </a>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="group bg-white/60 dark:bg-white/5 backdrop-blur-sm rounded-xl p-8 flex flex-col items-center text-center border border-slate-200/60 dark:border-slate-700/40 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/10 transition-all duration-500">
+      <div class="mb-8 w-16 h-16 rounded-full bg-soft-sage dark:bg-primary/10 flex items-center justify-center transition-transform duration-500 group-hover:scale-110">
+        <span class="material-icons-outlined text-3xl text-sage dark:text-primary">groups</span>
+      </div>
+      <h3 class="text-2xl font-display font-light text-slate-900 dark:text-white mb-4 leading-snug">Stakeholder Engagement</h3>
+      <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed mb-10 flex-grow">
+        Fostering meaningful dialogue between your organization and the communities you serve.
+      </p>
+      <a href="05-contact.html" class="w-full py-3 px-6 rounded-full border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 hover:bg-primary hover:text-white hover:border-primary transition-all duration-300 text-sm font-medium tracking-wide">
+        Inquire
+      </a>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="group bg-white/60 dark:bg-white/5 backdrop-blur-sm rounded-xl p-8 flex flex-col items-center text-center border border-slate-200/60 dark:border-slate-700/40 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/10 transition-all duration-500">
+      <div class="mb-8 w-16 h-16 rounded-full bg-soft-sage dark:bg-primary/10 flex items-center justify-center transition-transform duration-500 group-hover:scale-110">
+        <span class="material-icons-outlined text-3xl text-sage dark:text-primary">eco</span>
+      </div>
+      <h3 class="text-2xl font-display font-light text-slate-900 dark:text-white mb-4 leading-snug">Carbon Footprint Analysis</h3>
+      <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed mb-10 flex-grow">
+        In-depth auditing and reduction strategies to achieve net-zero targets efficiently.
+      </p>
+      <a href="05-contact.html" class="w-full py-3 px-6 rounded-full border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 hover:bg-primary hover:text-white hover:border-primary transition-all duration-300 text-sm font-medium tracking-wide">
+        Inquire
+      </a>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="group bg-white/60 dark:bg-white/5 backdrop-blur-sm rounded-xl p-8 flex flex-col items-center text-center border border-slate-200/60 dark:border-slate-700/40 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/10 transition-all duration-500">
+      <div class="mb-8 w-16 h-16 rounded-full bg-soft-sage dark:bg-primary/10 flex items-center justify-center transition-transform duration-500 group-hover:scale-110">
+        <span class="material-icons-outlined text-3xl text-sage dark:text-primary">sync</span>
+      </div>
+      <h3 class="text-2xl font-display font-light text-slate-900 dark:text-white mb-4 leading-snug">Circular Economy Transition</h3>
+      <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed mb-10 flex-grow">
+        Redesigning workflows to minimize waste and maximize resource longevity.
+      </p>
+      <a href="05-contact.html" class="w-full py-3 px-6 rounded-full border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 hover:bg-primary hover:text-white hover:border-primary transition-all duration-300 text-sm font-medium tracking-wide">
+        Inquire
+      </a>
+    </div>
+
+    <!-- Card 6 — CTA card -->
+    <div class="bg-primary/10 dark:bg-primary/10 rounded-xl p-8 flex flex-col items-center justify-center text-center border border-primary/20 hover:border-primary/40 transition-all duration-500">
+      <span class="material-icons-outlined text-primary text-4xl mb-6">add_circle_outline</span>
+      <h3 class="text-xl font-display italic text-slate-700 dark:text-slate-300 mb-3">Bespoke Engagements</h3>
+      <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed mb-8">
+        Every organization is unique. Let's craft something tailored to yours.
+      </p>
+      <a href="05-contact.html" class="px-8 py-3 bg-primary text-slate-800 rounded-full text-sm font-medium tracking-wide hover:shadow-lg hover:shadow-primary/20 transition-all">
+        Start a Conversation
+      </a>
+    </div>
+  </div>
+</main>
+
+<!-- Decorative blobs -->
+<div class="fixed -bottom-32 -left-32 w-96 h-96 bg-primary/5 rounded-full blur-[100px] -z-10"></div>
+<div class="fixed -top-32 -right-32 w-96 h-96 bg-primary/5 rounded-full blur-[100px] -z-10"></div>
+
+<!-- Footer -->
+<footer class="py-12 border-t border-slate-200 dark:border-slate-800">
+  <div class="max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+    <p class="text-slate-400 font-display italic text-lg">"Sustainability is not a goal, it is a way of being."</p>
+    <div class="flex gap-6">
+      <a class="text-slate-400 hover:text-primary transition-colors" href="#"><span class="material-icons-outlined">language</span></a>
+      <a class="text-slate-400 hover:text-primary transition-colors" href="#"><span class="material-icons-outlined">share</span></a>
+      <a class="text-slate-400 hover:text-primary transition-colors" href="#"><span class="material-icons-outlined">alternate_email</span></a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function toggleDark() {
+    const html = document.documentElement;
+    const isDark = html.classList.toggle('dark');
+    html.classList.toggle('light', !isDark);
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    const icon = document.querySelector('#dark-toggle .material-icons-outlined');
+    if (icon) icon.textContent = isDark ? 'dark_mode' : 'light_mode';
+  }
+  function toggleMobileMenu() {
+    document.getElementById('mobile-menu').classList.toggle('hidden');
+  }
+  (function() {
+    const saved = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    document.documentElement.classList.remove('light', 'dark');
+    document.documentElement.classList.add(saved);
+    if (saved === 'dark') {
+      const icon = document.querySelector('#dark-toggle .material-icons-outlined');
+      if (icon) icon.textContent = 'dark_mode';
+    }
+  })();
+</script>
+</body>
+</html>

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Insights & Contact — Verdant Path</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {primary: "#a8e689", "background-light": "#f7f8f6", "background-dark": "#172012", sage: "#8da382", "neutral-zen": "#fcfdfc", "soft-sage": "#eef7e9"}, fontFamily: {display: ["Newsreader", "serif"]}, borderRadius: {DEFAULT: "0.5rem", lg: "1rem", xl: "1.5rem", full: "9999px"}}}};</script>
+<style>
+  body { font-family: 'Newsreader', serif; }
+  .minimalist-input {
+    border: none;
+    border-bottom: 1px solid rgba(168, 230, 137, 0.3);
+    background: transparent;
+    width: 100%;
+    padding: 1rem 0;
+    font-family: 'Newsreader', serif;
+    font-size: 1rem;
+    color: inherit;
+    transition: border-color 0.3s ease;
+  }
+  .minimalist-input:focus {
+    outline: none;
+    border-bottom-color: #a8e689;
+  }
+  .minimalist-input::placeholder { color: #94a3b8; }
+</style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-100 antialiased overflow-x-hidden">
+
+<!-- Navigation -->
+<nav class="fixed top-0 w-full z-50 px-8 py-6 flex justify-between items-center bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md">
+  <a href="01-home.html" class="flex items-center gap-2">
+    <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
+      <span class="material-icons-outlined text-white">eco</span>
+    </div>
+    <span class="text-xl font-semibold tracking-tight">Verdant Path</span>
+  </a>
+  <div class="hidden md:flex gap-12 text-sm uppercase tracking-widest font-medium text-slate-500 dark:text-slate-400">
+    <a class="hover:text-primary transition-colors" href="02-about.html">About</a>
+    <a class="hover:text-primary transition-colors" href="03-services.html">Services</a>
+    <a class="hover:text-primary transition-colors" href="04-portfolio.html">Portfolio</a>
+    <a class="text-primary border-b border-primary/40 pb-1" href="05-contact.html#blog">Blog</a>
+    <a class="text-primary border-b border-primary/40 pb-1" href="05-contact.html">Contact</a>
+  </div>
+  <div class="flex items-center gap-3">
+    <button id="dark-toggle" onclick="toggleDark()" class="w-9 h-9 flex items-center justify-center rounded-full border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all" aria-label="Toggle dark mode">
+      <span class="material-icons-outlined text-slate-500 dark:text-slate-400 text-xl">light_mode</span>
+    </button>
+    <button class="hidden md:block px-6 py-2 border border-slate-200 dark:border-slate-800 rounded-full text-sm font-medium hover:bg-slate-50 dark:hover:bg-slate-800 transition-all">
+      Client Login
+    </button>
+    <button id="mobile-menu-btn" onclick="toggleMobileMenu()" class="md:hidden w-9 h-9 flex items-center justify-center rounded-full border border-slate-200 dark:border-slate-700" aria-label="Open menu">
+      <span class="material-icons-outlined text-slate-600 dark:text-slate-300">menu</span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div id="mobile-menu" class="hidden fixed inset-0 z-40 bg-background-light dark:bg-background-dark flex flex-col items-center justify-center gap-8 text-center">
+  <button onclick="toggleMobileMenu()" class="absolute top-6 right-8 w-9 h-9 flex items-center justify-center" aria-label="Close menu">
+    <span class="material-icons-outlined text-slate-500 dark:text-slate-400 text-2xl">close</span>
+  </button>
+  <a class="text-2xl font-display font-light hover:text-primary transition-colors" href="02-about.html">About</a>
+  <a class="text-2xl font-display font-light hover:text-primary transition-colors" href="03-services.html">Services</a>
+  <a class="text-2xl font-display font-light hover:text-primary transition-colors" href="04-portfolio.html">Portfolio</a>
+  <a class="text-2xl font-display font-light hover:text-primary transition-colors" href="05-contact.html#blog">Blog</a>
+  <a class="text-2xl font-display font-light hover:text-primary transition-colors" href="05-contact.html">Contact</a>
+</div>
+
+<main class="max-w-7xl mx-auto px-8 pt-40 pb-24">
+
+  <!-- ── Blog / Insights Section ─────────────────────────────── -->
+  <section class="mb-32" id="blog">
+    <div class="mb-16">
+      <div class="flex items-center gap-3 text-primary font-medium mb-6">
+        <span class="h-[1px] w-12 bg-primary"></span>
+        <span class="uppercase tracking-[0.2em] text-xs">Latest Thinking</span>
+      </div>
+      <h1 class="text-5xl md:text-6xl font-display italic leading-[1.1] text-slate-900 dark:text-white">
+        Decarbonization &amp; Strategy
+      </h1>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-0">
+      <!-- Blog Card 1 -->
+      <article class="group cursor-pointer border-t border-primary/20 pt-8 pb-12 pr-0 md:pr-16 hover:border-primary transition-colors duration-500">
+        <span class="text-xs text-slate-400 dark:text-slate-500 mb-4 block uppercase tracking-widest">March 14, 2024 · 6 min read</span>
+        <h3 class="text-2xl md:text-3xl font-display font-light leading-snug mb-6 group-hover:text-primary transition-colors duration-300 text-slate-900 dark:text-white">
+          The Future of ESG in 2024: Moving Beyond Disclosure to True Value Creation.
+        </h3>
+        <p class="text-slate-500 dark:text-slate-400 leading-relaxed max-w-md font-light">
+          Exploring how regulatory shifts are transforming sustainability from a compliance burden into a competitive advantage.
+        </p>
+        <div class="mt-6 flex items-center gap-2 text-primary text-sm font-medium">
+          <span>Read more</span>
+          <span class="material-icons-outlined text-sm">arrow_forward</span>
+        </div>
+      </article>
+
+      <!-- Blog Card 2 -->
+      <article class="group cursor-pointer border-t border-primary/20 pt-8 pb-12 pl-0 md:pl-16 hover:border-primary transition-colors duration-500 md:border-l md:border-l-slate-200/60 dark:md:border-l-slate-700/40">
+        <span class="text-xs text-slate-400 dark:text-slate-500 mb-4 block uppercase tracking-widest">February 28, 2024 · 8 min read</span>
+        <h3 class="text-2xl md:text-3xl font-display font-light leading-snug mb-6 group-hover:text-primary transition-colors duration-300 text-slate-900 dark:text-white">
+          Decarbonizing Supply Chains: The "Scope 3" Challenge and Opportunity.
+        </h3>
+        <p class="text-slate-500 dark:text-slate-400 leading-relaxed max-w-md font-light">
+          Practical steps for consultants and executives to measure and mitigate emissions within complex global networks.
+        </p>
+        <div class="mt-6 flex items-center gap-2 text-primary text-sm font-medium">
+          <span>Read more</span>
+          <span class="material-icons-outlined text-sm">arrow_forward</span>
+        </div>
+      </article>
+
+      <!-- Blog Card 3 -->
+      <article class="group cursor-pointer border-t border-primary/20 pt-8 pb-12 pr-0 md:pr-16 hover:border-primary transition-colors duration-500">
+        <span class="text-xs text-slate-400 dark:text-slate-500 mb-4 block uppercase tracking-widest">February 12, 2024 · 5 min read</span>
+        <h3 class="text-2xl md:text-3xl font-display font-light leading-snug mb-6 group-hover:text-primary transition-colors duration-300 text-slate-900 dark:text-white">
+          Why Mindful Leadership is Essential for Sustainability Professionals.
+        </h3>
+        <p class="text-slate-500 dark:text-slate-400 leading-relaxed max-w-md font-light">
+          Maintaining balance and clarity while tackling the world's most pressing environmental challenges.
+        </p>
+        <div class="mt-6 flex items-center gap-2 text-primary text-sm font-medium">
+          <span>Read more</span>
+          <span class="material-icons-outlined text-sm">arrow_forward</span>
+        </div>
+      </article>
+
+      <!-- Blog Card 4 -->
+      <article class="group cursor-pointer border-t border-primary/20 pt-8 pb-12 pl-0 md:pl-16 hover:border-primary transition-colors duration-500 md:border-l md:border-l-slate-200/60 dark:md:border-l-slate-700/40">
+        <span class="text-xs text-slate-400 dark:text-slate-500 mb-4 block uppercase tracking-widest">January 25, 2024 · 10 min read</span>
+        <h3 class="text-2xl md:text-3xl font-display font-light leading-snug mb-6 group-hover:text-primary transition-colors duration-300 text-slate-900 dark:text-white">
+          Integrating Circular Economy Principles into Corporate Strategy.
+        </h3>
+        <p class="text-slate-500 dark:text-slate-400 leading-relaxed max-w-md font-light">
+          A deep dive into regenerative business models that decouple growth from resource consumption.
+        </p>
+        <div class="mt-6 flex items-center gap-2 text-primary text-sm font-medium">
+          <span>Read more</span>
+          <span class="material-icons-outlined text-sm">arrow_forward</span>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ── Contact + Booking Section ──────────────────────────── -->
+  <section class="grid grid-cols-1 lg:grid-cols-2 gap-24 items-start" id="contact">
+
+    <!-- Contact Form -->
+    <div>
+      <div class="mb-12">
+        <div class="flex items-center gap-3 text-primary font-medium mb-6">
+          <span class="h-[1px] w-12 bg-primary"></span>
+          <span class="uppercase tracking-[0.2em] text-xs">Get in Touch</span>
+        </div>
+        <h2 class="text-4xl font-display italic text-slate-900 dark:text-white leading-[1.1]">
+          Let's Start a<br/>Conversation
+        </h2>
+      </div>
+      <form class="space-y-8">
+        <div>
+          <input class="minimalist-input" id="name" placeholder="Name" type="text"/>
+        </div>
+        <div>
+          <input class="minimalist-input" id="email" placeholder="Email" type="email"/>
+        </div>
+        <div>
+          <textarea class="minimalist-input resize-none" id="message" placeholder="Message" rows="3"></textarea>
+        </div>
+        <button class="mt-4 px-10 py-4 bg-primary text-slate-800 rounded-full font-medium hover:shadow-lg hover:shadow-primary/20 transition-all hover:-translate-y-1" type="submit">
+          Send Inquiry
+        </button>
+      </form>
+    </div>
+
+    <!-- Booking Widget -->
+    <div id="booking">
+      <div class="mb-8">
+        <div class="flex items-center gap-3 text-primary font-medium mb-6">
+          <span class="h-[1px] w-12 bg-primary"></span>
+          <span class="uppercase tracking-[0.2em] text-xs">Book a Session</span>
+        </div>
+        <h2 class="text-4xl font-display italic text-slate-900 dark:text-white leading-[1.1]">Reserve a<br/>Consultation</h2>
+        <p class="text-slate-500 dark:text-slate-400 text-sm mt-4 font-light">Schedule a 15-minute introductory call to discuss your sustainability goals.</p>
+      </div>
+
+      <div class="bg-white/60 dark:bg-white/5 rounded-xl p-8 border border-slate-200/60 dark:border-slate-700/40">
+        <!-- Calendar -->
+        <div class="flex items-center justify-between mb-6">
+          <span class="font-display font-medium text-lg text-slate-900 dark:text-white">March 2024</span>
+          <div class="flex gap-4">
+            <button class="text-slate-400 hover:text-primary transition-colors"><span class="material-icons-outlined">chevron_left</span></button>
+            <button class="text-slate-400 hover:text-primary transition-colors"><span class="material-icons-outlined">chevron_right</span></button>
+          </div>
+        </div>
+        <div class="grid grid-cols-7 gap-2 text-center text-xs mb-4 text-slate-400 uppercase tracking-widest">
+          <div>S</div><div>M</div><div>T</div><div>W</div><div>T</div><div>F</div><div>S</div>
+        </div>
+        <div class="grid grid-cols-7 gap-2 text-center text-sm">
+          <div class="p-2 text-slate-300">25</div>
+          <div class="p-2 text-slate-300">26</div>
+          <div class="p-2 text-slate-300">27</div>
+          <div class="p-2 text-slate-300">28</div>
+          <div class="p-2 text-slate-300">29</div>
+          <div class="p-2 text-slate-600 dark:text-slate-400">1</div>
+          <div class="p-2 text-slate-600 dark:text-slate-400">2</div>
+          <div class="p-2 text-slate-600 dark:text-slate-400">3</div>
+          <div class="p-2 text-slate-600 dark:text-slate-400">4</div>
+          <div class="p-2 text-slate-600 dark:text-slate-400">5</div>
+          <div class="p-2 text-slate-600 dark:text-slate-400">6</div>
+          <div class="p-2 text-slate-600 dark:text-slate-400">7</div>
+          <div class="p-2 text-slate-600 dark:text-slate-400">8</div>
+          <div class="p-2 text-slate-600 dark:text-slate-400">9</div>
+          <div class="p-2 text-slate-600 dark:text-slate-400">10</div>
+          <div class="p-2 text-slate-600 dark:text-slate-400">11</div>
+          <div class="p-2 text-slate-600 dark:text-slate-400">12</div>
+          <div class="p-2 text-slate-600 dark:text-slate-400">13</div>
+          <div class="p-2 bg-primary text-white rounded-full cursor-pointer font-medium">14</div>
+          <div class="p-2 hover:bg-soft-sage dark:hover:bg-primary/10 rounded-full cursor-pointer text-slate-600 dark:text-slate-400">15</div>
+          <div class="p-2 hover:bg-soft-sage dark:hover:bg-primary/10 rounded-full cursor-pointer text-slate-600 dark:text-slate-400">16</div>
+          <div class="p-2 hover:bg-soft-sage dark:hover:bg-primary/10 rounded-full cursor-pointer text-slate-600 dark:text-slate-400">17</div>
+          <div class="p-2 hover:bg-soft-sage dark:hover:bg-primary/10 rounded-full cursor-pointer text-slate-600 dark:text-slate-400">18</div>
+          <div class="p-2 hover:bg-soft-sage dark:hover:bg-primary/10 rounded-full cursor-pointer text-slate-600 dark:text-slate-400">19</div>
+          <div class="p-2 hover:bg-soft-sage dark:hover:bg-primary/10 rounded-full cursor-pointer text-slate-600 dark:text-slate-400">20</div>
+        </div>
+        <button class="w-full mt-8 py-3 border border-primary/30 text-primary rounded-full text-sm font-medium hover:bg-primary/5 transition-colors tracking-wide">
+          View Available Times
+        </button>
+        <div class="mt-6 flex items-center gap-3 text-slate-500 dark:text-slate-400 text-xs">
+          <span class="material-icons-outlined text-sm text-sage">public</span>
+          <span>Timezone: Central European Time (GMT+1)</span>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- Decorative blobs -->
+<div class="fixed -bottom-32 -left-32 w-96 h-96 bg-primary/5 rounded-full blur-[100px] -z-10"></div>
+<div class="fixed -top-32 -right-32 w-96 h-96 bg-primary/5 rounded-full blur-[100px] -z-10"></div>
+
+<!-- Footer -->
+<footer class="py-12 border-t border-slate-200 dark:border-slate-800">
+  <div class="max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+    <p class="text-slate-400 font-display italic text-lg">"Sustainability is not a goal, it is a way of being."</p>
+    <div class="flex gap-6">
+      <a class="text-slate-400 hover:text-primary transition-colors" href="#"><span class="material-icons-outlined">language</span></a>
+      <a class="text-slate-400 hover:text-primary transition-colors" href="#"><span class="material-icons-outlined">share</span></a>
+      <a class="text-slate-400 hover:text-primary transition-colors" href="#"><span class="material-icons-outlined">alternate_email</span></a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function toggleDark() {
+    const html = document.documentElement;
+    const isDark = html.classList.toggle('dark');
+    html.classList.toggle('light', !isDark);
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    const icon = document.querySelector('#dark-toggle .material-icons-outlined');
+    if (icon) icon.textContent = isDark ? 'dark_mode' : 'light_mode';
+  }
+  function toggleMobileMenu() {
+    document.getElementById('mobile-menu').classList.toggle('hidden');
+  }
+  (function() {
+    const saved = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    document.documentElement.classList.remove('light', 'dark');
+    document.documentElement.classList.add(saved);
+    if (saved === 'dark') {
+      const icon = document.querySelector('#dark-toggle .material-icons-outlined');
+      if (icon) icon.textContent = 'dark_mode';
+    }
+  })();
+</script>
+</body>
+</html>
