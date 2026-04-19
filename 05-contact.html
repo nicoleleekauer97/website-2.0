@@ -14,12 +14,14 @@
   .minimalist-input {
     border: none;
     border-bottom: 1px solid rgba(168, 230, 137, 0.3);
+    border-radius: 0;
     background: transparent;
     width: 100%;
     padding: 1rem 0;
     font-family: 'Newsreader', serif;
     font-size: 1rem;
     color: inherit;
+    box-shadow: none;
     transition: border-color 0.3s ease;
   }
   .minimalist-input:focus {
@@ -78,15 +80,16 @@
           Let's Start a<br/>Conversation
         </h2>
       </div>
-      <form class="space-y-8">
+      <form class="space-y-8" method="POST" action="https://formspree.io/f/YOUR_FORM_ID">
+        <input type="hidden" name="_replyto" value="nicoleleekauer97@gmail.com"/>
         <div>
-          <input class="minimalist-input" id="name" placeholder="Name" type="text"/>
+          <input class="minimalist-input" id="name" name="name" placeholder="Name" type="text"/>
         </div>
         <div>
-          <input class="minimalist-input" id="email" placeholder="Email" type="email"/>
+          <input class="minimalist-input" id="email" name="email" placeholder="Email" type="email"/>
         </div>
         <div>
-          <textarea class="minimalist-input resize-none" id="message" placeholder="Message" rows="3"></textarea>
+          <textarea class="minimalist-input resize-none" id="message" name="message" placeholder="Message" rows="3"></textarea>
         </div>
         <button class="mt-4 px-10 py-4 bg-primary text-slate-800 rounded-full font-medium hover:shadow-lg hover:shadow-primary/20 transition-all hover:-translate-y-1" type="submit">
           Send Inquiry
@@ -105,53 +108,16 @@
         <p class="text-slate-500 dark:text-slate-400 text-sm mt-4 font-light">Schedule a 15-minute introductory call to discuss your sustainability goals.</p>
       </div>
 
-      <div class="bg-white/60 dark:bg-white/5 rounded-xl p-8 border border-slate-200/60 dark:border-slate-700/40">
-        <!-- Calendar -->
-        <div class="flex items-center justify-between mb-6">
-          <span class="font-display font-medium text-lg text-slate-900 dark:text-white">March 2024</span>
-          <div class="flex gap-4">
-            <button class="text-slate-400 hover:text-primary transition-colors"><span class="material-icons-outlined">chevron_left</span></button>
-            <button class="text-slate-400 hover:text-primary transition-colors"><span class="material-icons-outlined">chevron_right</span></button>
-          </div>
-        </div>
-        <div class="grid grid-cols-7 gap-2 text-center text-xs mb-4 text-slate-400 uppercase tracking-widest">
-          <div>S</div><div>M</div><div>T</div><div>W</div><div>T</div><div>F</div><div>S</div>
-        </div>
-        <div class="grid grid-cols-7 gap-2 text-center text-sm">
-          <div class="p-2 text-slate-300">25</div>
-          <div class="p-2 text-slate-300">26</div>
-          <div class="p-2 text-slate-300">27</div>
-          <div class="p-2 text-slate-300">28</div>
-          <div class="p-2 text-slate-300">29</div>
-          <div class="p-2 text-slate-600 dark:text-slate-400">1</div>
-          <div class="p-2 text-slate-600 dark:text-slate-400">2</div>
-          <div class="p-2 text-slate-600 dark:text-slate-400">3</div>
-          <div class="p-2 text-slate-600 dark:text-slate-400">4</div>
-          <div class="p-2 text-slate-600 dark:text-slate-400">5</div>
-          <div class="p-2 text-slate-600 dark:text-slate-400">6</div>
-          <div class="p-2 text-slate-600 dark:text-slate-400">7</div>
-          <div class="p-2 text-slate-600 dark:text-slate-400">8</div>
-          <div class="p-2 text-slate-600 dark:text-slate-400">9</div>
-          <div class="p-2 text-slate-600 dark:text-slate-400">10</div>
-          <div class="p-2 text-slate-600 dark:text-slate-400">11</div>
-          <div class="p-2 text-slate-600 dark:text-slate-400">12</div>
-          <div class="p-2 text-slate-600 dark:text-slate-400">13</div>
-          <div class="p-2 bg-primary text-white rounded-full cursor-pointer font-medium">14</div>
-          <div class="p-2 hover:bg-soft-sage dark:hover:bg-primary/10 rounded-full cursor-pointer text-slate-600 dark:text-slate-400">15</div>
-          <div class="p-2 hover:bg-soft-sage dark:hover:bg-primary/10 rounded-full cursor-pointer text-slate-600 dark:text-slate-400">16</div>
-          <div class="p-2 hover:bg-soft-sage dark:hover:bg-primary/10 rounded-full cursor-pointer text-slate-600 dark:text-slate-400">17</div>
-          <div class="p-2 hover:bg-soft-sage dark:hover:bg-primary/10 rounded-full cursor-pointer text-slate-600 dark:text-slate-400">18</div>
-          <div class="p-2 hover:bg-soft-sage dark:hover:bg-primary/10 rounded-full cursor-pointer text-slate-600 dark:text-slate-400">19</div>
-          <div class="p-2 hover:bg-soft-sage dark:hover:bg-primary/10 rounded-full cursor-pointer text-slate-600 dark:text-slate-400">20</div>
-        </div>
-        <button class="w-full mt-8 py-3 border border-primary/30 text-primary rounded-full text-sm font-medium hover:bg-primary/5 transition-colors tracking-wide">
-          View Available Times
-        </button>
-        <div class="mt-6 flex items-center gap-3 text-slate-500 dark:text-slate-400 text-xs">
-          <span class="material-icons-outlined text-sm text-sage">public</span>
-          <span>Timezone: Central European Time (GMT+1)</span>
-        </div>
+      <div
+        class="calendly-inline-widget"
+        data-url="https://calendly.com/nicoleleekauer97/30min?background_color=f7f8f6&text_color=1e293b"
+        style="min-width:320px;height:700px;">
       </div>
+      <script
+        type="text/javascript"
+        src="https://assets.calendly.com/assets/external/widget.js"
+        async>
+      </script>
     </div>
   </section>
 </main>
